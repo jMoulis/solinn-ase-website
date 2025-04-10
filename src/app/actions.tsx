@@ -32,9 +32,9 @@ export async function sendEmail(formData: FormData): Promise<Response> {
   const { name, email, message } = parsed.data;
 
   const { error } = await resend.emails.send({
-    from: 'Julien <contact@solinn.fr>',
+    from: 'Julien de Solinn <contact@mail.solinn.fr>',
     to: email,
-    subject: 'Demande de contact',
+    subject: '📬 Demande de contact',
     react: ContactReply({
       name: name
     })
@@ -50,7 +50,7 @@ export async function sendEmail(formData: FormData): Promise<Response> {
     };
   }
   await resend.emails.send({
-    from: 'Acme <onboarding@resend.dev>',
+    from: 'Julien de Solinn <contact@mail.solinn.fr>',
     to: 'contact@solinn.fr',
     subject: '📬 Nouveau message de contact',
     html: `
