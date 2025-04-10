@@ -1,0 +1,7 @@
+# robots.txt pour Solinn ASE
+
+User-agent: *
+Disallow: /api/
+Disallow: /app/
+
+Sitemap: https://www.solinn.fr/sitemap.xml

@@ -32,7 +32,7 @@ export async function sendEmail(formData: FormData): Promise<Response> {
   const { name, email, message } = parsed.data;
 
   const { error } = await resend.emails.send({
-    from: 'Acme <onboarding@resend.dev>',
+    from: 'Julien <contact@solinn.fr>',
     to: email,
     subject: 'Demande de contact',
     react: ContactReply({
