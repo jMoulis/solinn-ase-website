@@ -1,0 +1,13 @@
+{
+  "HomePage": {
+    "title": "Salut!",
+    "about": "A propos",
+    "navbar": {
+      "solutions": "Nos Solutions",
+      "testimonials": "Témoignages",
+      "whoAreWe": "Qui sommes-nous?",
+      "faq": "FAQ",
+      "contactUs": "contactez-nous"
+    }
+  }
+}
