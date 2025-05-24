@@ -18,7 +18,7 @@ const dxRigraf = localFont({
     }
   ]
 });
-const inter = Inter({ variable: '--font-inter' });
+const inter = Inter({ variable: '--font-inter', subsets: ['latin'] });
 
 export default async function LocaleLayout({
   children,
