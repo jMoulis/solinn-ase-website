@@ -26,7 +26,7 @@ export const TitleH2 = ({
 }) => (
   <h2
     className={twMerge(
-      'font-[dxRigraf] font-semibold md:text-[60px] text-[40px] leading-[50px] md:leading-[60px] tracking-[-0.01em]',
+      'font-[dxRigraf] text-center font-semibold md:text-[60px] text-[40px] leading-[50px] md:leading-[60px] tracking-[-0.01em]',
       className
     )}>
     {children}
@@ -39,7 +39,11 @@ export const TitleH3 = ({
   children: React.ReactNode;
   className?: string;
 }) => (
-  <h3 className={twMerge('font-[dxRigraf] md:text-[40px]', className)}>
+  <h3
+    className={twMerge(
+      'font-[dxRigraf] md:text-[40px] text-[30px] text-center md:text-left',
+      className
+    )}>
     {children}
   </h3>
 );

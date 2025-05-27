@@ -1,7 +1,7 @@
 'use server';
 
 import { Resend } from 'resend';
-import ContactReply from './[locale]/components/ConfirmationEmail';
+import ContactReply from './[locale]/components/Contact/ConfirmationEmail';
 import { contactSchema } from '@/lib/validation/contact';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
