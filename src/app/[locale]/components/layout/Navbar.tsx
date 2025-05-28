@@ -10,7 +10,9 @@ function Navbar() {
   return (
     <header className='flex fixed right-0 left-0 items-center z-50 justify-between md:px-20 px-6 py-8 bg-primary'>
       <div className='hidden md:block'>
-        <SolinnLogoHeader />
+        <Link href='/'>
+          <SolinnLogoHeader />
+        </Link>
       </div>
       <div className='md:hidden'>
         <Image
@@ -26,12 +28,12 @@ function Navbar() {
         <ul className='md:flex hidden space-x-4'>
           {keys.map((key) => (
             <li key={key}>
-              <Link href={`#${key}`}>{t(key)}</Link>
+              <Link href={`/#${key}`}>{t(key)}</Link>
             </li>
           ))}
         </ul>
         <div className='ml-4'>
-          <ContactButton />
+          <ContactButton label='contactez-nous' topic='contact' />
         </div>
       </nav>
     </header>

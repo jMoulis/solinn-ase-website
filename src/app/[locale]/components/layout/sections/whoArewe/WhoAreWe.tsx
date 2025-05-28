@@ -7,7 +7,9 @@ import Image from 'next/image';
 import whoAreWe from '@/lib/assets/images/whoAreWe.png';
 import { CurlyLineBlack } from '@/app/[locale]/components/shared/CurlyLineBlack';
 import clapHands from '@/lib/assets/images/clap-hands.png';
-import { Button } from '@/components/ui/button';
+import { ContactButton } from '../../../Contact/ContactButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export function WhoAreWe() {
   return (
@@ -109,7 +111,12 @@ export function WhoAreWe() {
             C’est ça, l’effet Solinn : une onde de soin, de lien, de continuité.
           </BodyMD>
           <BodyMD>Et tout commence par une conversation.</BodyMD>
-          <Button className='bg-black mt-4'>Prenons 30 minutes</Button>
+          <ContactButton
+            className='bg-black text-white mt-4'
+            label='Demandez une démo'
+            topic='demo'>
+            <FontAwesomeIcon icon={faArrowRight} />
+          </ContactButton>
         </div>
         <Image
           alt='Des mains qui se clap'

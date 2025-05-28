@@ -11,30 +11,45 @@ import {
 } from '@/components/ui/dialog';
 import { useTranslations } from 'next-intl';
 import ContactForm from './Contact';
-import { InlineWidget } from 'react-calendly';
+import { cn } from '@/lib/utils';
 
-export function ContactButton() {
+type Props = {
+  label: string;
+  className?: string;
+  topic: string;
+  app?: string;
+  children?: React.ReactNode;
+};
+export function ContactButton({
+  className,
+  label,
+  topic,
+  app,
+  children
+}: Props) {
   const t = useTranslations('HomePage.navbar');
+  console.log(label, 'label in ContactButton');
   return (
     <Dialog>
       <DialogTrigger asChild>
         <Button
           variant='outline'
-          className='bg-transparent hover:bg-black border-black hover:text-white'>
-          {t('contactUs')}
+          className={cn(
+            'bg-transparent hover:bg-black border-black hover:text-white cursor-pointer',
+            className
+          )}>
+          {label ?? t('contactUs')}
+          {children}
         </Button>
       </DialogTrigger>
-      <DialogContent className='md:max-w-[90vw]'>
+      <DialogContent className='md:max-w-[90vw] md:w-[40vw] bg-primary'>
         <DialogHeader>
           <DialogTitle>Contactez-nous</DialogTitle>
-          <DialogDescription>
+          <DialogDescription hidden>
             Prenez contact avec notre équipe pour discuter de vos besoins, poser
             vos questions ou planifier une démonstration de nos solutions.
           </DialogDescription>
-          <div className='flex'>
-            <ContactForm />
-            <InlineWidget url='https://calendly.com/julien-moulis-solinn' />
-          </div>
+          <ContactForm topic={topic} app={app} />
         </DialogHeader>
       </DialogContent>
     </Dialog>

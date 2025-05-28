@@ -21,7 +21,8 @@ const solutionCards = [
     ],
     bgColor: 'bg-primary',
     button: {
-      action: 'any',
+      topic: 'demo',
+      app: 'ase',
       label: 'Demander une démo'
     }
   },
@@ -43,7 +44,8 @@ const solutionCards = [
     ],
     bgColor: 'bg-secondary',
     button: {
-      action: 'any',
+      topic: 'demo',
+      app: 'asso',
       label: 'Tenez-moi au courant'
     }
   }

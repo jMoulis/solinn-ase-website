@@ -7,7 +7,7 @@ import Link from 'next/link';
 const links = [
   {
     label: 'Mentions légales',
-    href: '/mentions-legales'
+    href: '/legal'
   }
 ];
 const socialLinks = [

@@ -6,10 +6,10 @@ import {
   CollapsibleContent,
   CollapsibleTrigger
 } from '@/components/ui/collapsible';
-import Button from '@/app/[locale]/components/buttons/Button';
+import { Plus } from 'lucide-react';
+import { ContactButton } from '../../../Contact/ContactButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { Plus } from 'lucide-react';
 
 type Props = {
   title: string;
@@ -19,8 +19,9 @@ type Props = {
   items: string[];
   bgColor: string;
   button: {
-    action: string;
     label: string;
+    topic: string;
+    app: string;
   };
 };
 function SolutionCard({
@@ -75,19 +76,13 @@ function SolutionCard({
           <span>En savoir</span> <Plus className='inline ml-2' size={20} />
         </CollapsibleTrigger>
       </Collapsible>
-      <Button>
-        <span>{button.label}</span>
-        <FontAwesomeIcon
-          icon={faArrowRight}
-          className='ml-2'
-          style={{
-            fontSize: '12px',
-            color: '#FFFFFF',
-            width: '16px',
-            height: '16px'
-          }}
-        />
-      </Button>
+      <ContactButton
+        className='bg-black text-white'
+        label={button.label}
+        topic={button.topic}
+        app={button.app}>
+        <FontAwesomeIcon icon={faArrowRight} />
+      </ContactButton>
     </li>
   );
 }

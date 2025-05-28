@@ -13,22 +13,25 @@ type ErrorMessage = {
   system?: string[] | undefined;
 } | null;
 type Response = { status: boolean; errors: ErrorMessage };
+
 export async function sendEmail(formData: FormData): Promise<Response> {
   const parsed = contactSchema.safeParse({
     name: formData.get('name'),
     email: formData.get('email'),
-    message: formData.get('message')
+    message: formData.get('message'),
+    topic: formData.get('topic'),
+    app: formData.get('app')
   });
 
   if (!parsed.success) {
     return { status: false, errors: parsed.error.flatten().fieldErrors };
   }
-  const { name, email, message } = parsed.data;
+  const { name, email, message, topic, app } = parsed.data;
 
   const { error } = await resend.emails.send({
     from: 'Julien de Solinn <contact@mail.solinn.fr>',
     to: email,
-    subject: '📬 Demande de contact',
+    subject: topic || '📬 Demande de contact',
     react: ContactReply({ name: name })
   });
   if (error) {
@@ -49,6 +52,8 @@ export async function sendEmail(formData: FormData): Promise<Response> {
         <p><strong>Nom :</strong> ${name}</p>
         <p><strong>Email :</strong> ${email}</p>
         <p><strong>Message :</strong><br/>${message}</p>
+        <p><strong>Sujet :</strong> ${topic || 'Aucun sujet spécifié'}</p>
+        <p><strong>Application :</strong> ${app || 'Aucune application spécifiée'}</p>
       `
   });
 

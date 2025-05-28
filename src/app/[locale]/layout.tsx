@@ -7,6 +7,7 @@ import Main from './components/layout/Main/Main';
 import localFont from 'next/font/local';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { Analytics } from '@vercel/analytics/next';
 
 const dxRigraf = localFont({
   variable: '--font-dxRigraf',
@@ -41,6 +42,7 @@ export default async function LocaleLayout({
           <Main>{children}</Main>
           <Footer />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );

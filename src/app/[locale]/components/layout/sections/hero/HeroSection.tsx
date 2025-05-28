@@ -7,9 +7,9 @@ import {
   BodyXLMD,
   TitleH1
 } from '@/app/[locale]/components/Typos/Typos';
-import Button from '@/app/[locale]/components/buttons/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 function HeroSection() {
   return (
@@ -19,10 +19,9 @@ function HeroSection() {
           Vous êtes une association, un département, une structure d’aide
           engagée.
         </BodyXLMD>
-        <TitleH1>solinn,</TitleH1>
-        <div className='relative'>
-          <TitleH1 className='relative md:w-[600px] z-20'>
-            la technologie au service du lien humain
+        <div className='flex items-center mb-0 space-x-2 relative '>
+          <TitleH1 className='z-20 max-w-[624px]'>
+            solinn, la technologie au service du lien humain
           </TitleH1>
           <Image
             src='/images/techno-underline.png'
@@ -30,7 +29,7 @@ function HeroSection() {
             width={200}
             height={20}
             priority
-            className='inline-block absolute w-[480px] right-[70px] top-[50px] z-10'
+            className='inline-block absolute w-[480px] md:left-[0px] md:top-[140px] top-[95px] z-10'
           />
           <Image
             src='/images/underline-2.png'
@@ -38,9 +37,10 @@ function HeroSection() {
             width={200}
             height={20}
             priority
-            className='inline-block absolute w-[340px] right-[140px] bottom-1 z-10'
+            className='inline-block absolute md:w-[340px] md:left-[0px] md:bottom-1 bottom-0 w-[240px] z-10'
           />
         </div>
+
         <BodyMD>
           Chez Solinn, nous concevons des produits numériques sur-mesure pour
           les acteurs de l’accompagnement des personnes en situation de
@@ -49,7 +49,9 @@ function HeroSection() {
           pour ce qui compte vraiment : l’humain. Des solutions simples,
           efficaces, respectueuses de vos pratiques.
         </BodyMD>
-        <Button className='mt-6'>
+        <Link
+          href='#solutions'
+          className='mt-6 bg-neutral-900 text-white w-fit rounded-[8px] whitespace-nowrap px-[24px] py-[12px] text-[16px] flex justify-center items-center'>
           <span>Nos solutions</span>
           <FontAwesomeIcon
             icon={faArrowRight}
@@ -61,7 +63,7 @@ function HeroSection() {
               height: '16px'
             }}
           />
-        </Button>
+        </Link>
       </article>
       <article className='w-[50%] relative lg:flex  hidden flex-col transform translate-y-[30px] translate-x-[100px]'>
         <Image
