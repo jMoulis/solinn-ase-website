@@ -80,7 +80,8 @@
   :root {
     --background: #1b1b1b;
     --foreground: #f8f8f8;
-    --primary: #ffe680;
+    --primary: #deb3d5;
+    --secondary: #fff9d5;
     --primary-foreground: #1b1b1b;
     --muted: #2d2d2d;
     --muted-foreground: #dcd2a3;

@@ -28,7 +28,7 @@ export function ContactButton({
   children
 }: Props) {
   const t = useTranslations('HomePage.navbar');
-  console.log(label, 'label in ContactButton');
+
   return (
     <Dialog>
       <DialogTrigger asChild>
