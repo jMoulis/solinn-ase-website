@@ -6,13 +6,32 @@ import {
 } from '@/app/[locale]/components/Typos/Typos';
 import observationIllustration from '@/lib/assets/images/observation-illustrationv2.png';
 import observationIllustration2 from '@/lib/assets/images/observation-illustration-2.png';
-
 import Image from 'next/image';
 import { PointingArrowUp } from './PointingArrowUp';
 import { CurlyLineBlack } from '../../../shared/CurlyLineBlack';
+import React from 'react';
+import { cn } from '@/lib/utils';
+
+const Card = ({
+  children,
+  className
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return (
+    <div
+      className={cn(
+        'bg-[#FFD6F6] rounded-[50px] md:mt-[40px] flex md:flex-row flex-col relative md:px-[70px] md:pb-0 items-center p-6 mb-8 md:mb-0',
+        className
+      )}>
+      {children}
+    </div>
+  );
+};
 export function Observation() {
   return (
-    <section className='bg-primary md:pb-[80px] md:px-[80px]'>
+    <section className='bg-primary md:pb-[80px] md:px-[80px] md:mt-[80px] mt-16'>
       <div className='flex justify-center items-center flex-col space-y-2'>
         <TitleH2>{'"Nous faisons beaucoup avec peu."'}</TitleH2>
         <div>
@@ -26,7 +45,7 @@ export function Observation() {
           </BodyLG>
         </div>
       </div>
-      <div className='bg-[#FFD6F6] rounded-[50px] md:mt-[40px] flex md:flex-row flex-col relative md:px-[70px] md:pb-0 items-center p-6 mb-8 md:mb-0'>
+      <Card>
         <div className='absolute top-[-20px] right-0 hidden md:block'>
           <CurlyLineBlack />
         </div>
@@ -54,8 +73,8 @@ export function Observation() {
             ))}
           </ul>
         </div>
-      </div>
-      <div className='bg-secondary rounded-[50px] md:pt-[40px] md:mt-[40px] flex md:flex-row md:px-[70px] overflow-hidden md:pb-0 p-6 flex-col-reverse'>
+      </Card>
+      <Card className='bg-secondary justify-between flex-col-reverse'>
         <div>
           <div className='flex flex-col justify-center items-start gap-6 flex-1'>
             <DisplayXSBold>
@@ -75,20 +94,22 @@ export function Observation() {
             </ul>
           </div>
         </div>
-        <div className='flex-col hidden md:flex items-center transform md:translate-x-[40px]'>
-          <BodyMD className='md:w-[131px]'>
-            + de 150 000 associations engagées
-          </BodyMD>
-          <PointingArrowUp />
+        <div className='flex'>
+          <div className='flex-col hidden md:flex items-center transform md:translate-x-[40px]'>
+            <BodyMD className='md:w-[131px]'>
+              + de 150 000 associations engagées
+            </BodyMD>
+            <PointingArrowUp />
+          </div>
+          <Image
+            src={observationIllustration2}
+            alt='Observation Illustration'
+            width={365}
+            height={379}
+            className='transform md:translate-y-0 translate-y-[-20px] md:mt-0 mt-[20px] md:mb-0 mb-[20px]'
+          />
         </div>
-        <Image
-          src={observationIllustration2}
-          alt='Observation Illustration'
-          width={365}
-          height={379}
-          className='transform md:translate-y-0 translate-y-[-20px] md:mt-0 mt-[20px] md:mb-0 mb-[20px]'
-        />
-      </div>
+      </Card>
     </section>
   );
 }

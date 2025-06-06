@@ -24,14 +24,10 @@ import {
   FormMessage
 } from '@/components/ui/form';
 import { BodyMD } from '../Typos/Typos';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+// import captcha from '@/lib/assets/images/captcha.png';
 
-const Required = () => {
-  return (
-    <span className='text-xs text-mute px-2 bg-indigo-400 mx-2 rounded-sm text-white'>
-      Requis
-    </span>
-  );
-};
+// import Image from 'next/image';
 
 type Props = {
   topic?: string;
@@ -40,6 +36,8 @@ type Props = {
 export default function ContactForm({ topic, app }: Props) {
   const [success, setSuccess] = useState(false);
   const [errors, setErrors] = useState<Record<string, string[]>>({});
+  const { executeRecaptcha, container } = useGoogleReCaptcha();
+
   const form = useForm<ContactFormInput>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -51,6 +49,8 @@ export default function ContactForm({ topic, app }: Props) {
     }
   });
 
+  console.log(container);
+
   const onSubmit = async (data: ContactFormInput) => {
     const formData = new FormData();
     formData.append('name', data.name);
@@ -58,7 +58,14 @@ export default function ContactForm({ topic, app }: Props) {
     formData.append('message', data.message);
     formData.append('topic', data.topic);
     formData.append('app', data.app || '');
-    const result = await sendEmail(formData);
+
+    if (!executeRecaptcha) {
+      setErrors({ system: ["reCAPTCHA n'est pas disponible."] });
+      return;
+    }
+    const token = await executeRecaptcha('form_submit');
+
+    const result = await sendEmail(formData, token);
 
     if (result.status) {
       setSuccess(true);
@@ -71,7 +78,7 @@ export default function ContactForm({ topic, app }: Props) {
 
   if (success) {
     return (
-      <BodyMD className='text-green-600 mt-4'>
+      <BodyMD className='mt-4 bg-custom-white p-4 rounded-md'>
         ✅ Votre message a bien été envoyé.
       </BodyMD>
     );
@@ -80,15 +87,13 @@ export default function ContactForm({ topic, app }: Props) {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className='space-y-4 my-8 w-full '>
+        className='space-y-4 my-8 w-full max-h-[80vh] bg-custom-white p-4 rounded-md overflow-y-auto'>
         <FormField
           control={form.control}
           name='name'
           render={({ field }) => (
             <FormItem>
-              <FormLabel htmlFor='name'>
-                Votre nom <Required />
-              </FormLabel>
+              <FormLabel htmlFor='name'>Votre nom *</FormLabel>
               <FormControl>
                 <Input
                   type='text'
@@ -107,9 +112,7 @@ export default function ContactForm({ topic, app }: Props) {
           name='email'
           render={({ field }) => (
             <FormItem>
-              <FormLabel htmlFor='email'>
-                Votre email <Required />
-              </FormLabel>
+              <FormLabel htmlFor='email'>Votre email *</FormLabel>
               <FormControl>
                 <Input
                   type='email'
@@ -129,9 +132,7 @@ export default function ContactForm({ topic, app }: Props) {
           name='topic'
           render={({ field }) => (
             <FormItem>
-              <FormLabel htmlFor='topic'>
-                Sujet <Required />
-              </FormLabel>
+              <FormLabel htmlFor='topic'>Sujet *</FormLabel>
               <FormControl>
                 <Select
                   onValueChange={field.onChange}
@@ -179,9 +180,7 @@ export default function ContactForm({ topic, app }: Props) {
           name='message'
           render={({ field }) => (
             <FormItem>
-              <FormLabel htmlFor='message'>
-                Votre message <Required />
-              </FormLabel>
+              <FormLabel htmlFor='message'>Votre message *</FormLabel>
               <FormControl>
                 <Textarea
                   id='message'
@@ -194,8 +193,11 @@ export default function ContactForm({ topic, app }: Props) {
             </FormItem>
           )}
         />
-
-        {/* Bouton */}
+        {errors.system && errors.system.length > 0 && (
+          <BodyMD className='text-red-600 mt-4'>
+            {errors.system.join(' ')}
+          </BodyMD>
+        )}
         <div className='text-center'>
           <Button
             type='submit'

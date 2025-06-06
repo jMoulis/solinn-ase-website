@@ -197,6 +197,13 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "6.7.2"
 
+"@fortawesome/free-brands-svg-icons@^6.7.2":
+  version "6.7.2"
+  resolved "https://npm.fontawesome.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-6.7.2.tgz#4ebee8098f31da5446dda81edc344025eb59b27e"
+  integrity sha512-zu0evbcRTgjKfrr77/2XX+bU+kuGfjm0LbajJHVIgBWNIDzrhpRxiCPNT8DW5AdmSsq7Mcf9D1bH0aSeSUSM+Q==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.7.2"
+
 "@fortawesome/free-solid-svg-icons@^6.7.2":
   version "6.7.2"
   resolved "https://npm.fontawesome.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-6.7.2.tgz#fe25883b5eb8464a82918599950d283c465b57f6"
@@ -2317,6 +2324,13 @@ hasown@^2.0.2:
   dependencies:
     function-bind "^1.1.2"
 
+hoist-non-react-statics@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
+  integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
+  dependencies:
+    react-is "^16.7.0"
+
 html-to-text@9.0.5:
   version "9.0.5"
   resolved "https://registry.yarnpkg.com/html-to-text/-/html-to-text-9.0.5.tgz#6149a0f618ae7a0db8085dca9bbf96d32bb8368d"
@@ -2891,6 +2905,11 @@ next-intl@^4.1.0:
     negotiator "^1.0.0"
     use-intl "^4.1.0"
 
+next-recaptcha-v3@^1.5.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/next-recaptcha-v3/-/next-recaptcha-v3-1.5.2.tgz#bad67f1add6a4614d88496f4fc4d8449448763b1"
+  integrity sha512-CTFQvyWWQLrIuI++NhOFeQKdELUFvTDGfCty+bz6hxU8frS59ycl4TInvWhCn+9eKjAqV6LqQZZGHdwla8t8GQ==
+
 next@15.3.0:
   version "15.3.0"
   resolved "https://registry.yarnpkg.com/next/-/next-15.3.0.tgz#f8aa64ab584664db75648bd87d5d68c02eb2d56f"
@@ -3134,12 +3153,19 @@ react-dom@^19.0.0:
   dependencies:
     scheduler "^0.26.0"
 
+react-google-recaptcha-v3@^1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/react-google-recaptcha-v3/-/react-google-recaptcha-v3-1.11.0.tgz#e65ab48f6f30398dd659c2b0f0f893933ac09aea"
+  integrity sha512-kLQqpz/77m8+trpBwzqcxNtvWZYoZ/YO6Vm2cVTHW8hs80BWUfDpC7RDwuAvpswwtSYApWfaSpIDFWAIBNIYxQ==
+  dependencies:
+    hoist-non-react-statics "^3.3.2"
+
 react-hook-form@^7.56.4:
   version "7.56.4"
   resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.56.4.tgz#273f55d43fb24ace3e2b9409d0d5326306d7905e"
   integrity sha512-Rob7Ftz2vyZ/ZGsQZPaRdIefkgOSrQSPXfqBdvOPwJfoGnjwRJUs7EM7Kc1mcoDv3NOtqBzPGbcMB8CGn9CKgw==
 
-react-is@^16.13.1:
+react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==

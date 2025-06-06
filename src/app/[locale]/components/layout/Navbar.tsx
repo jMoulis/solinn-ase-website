@@ -28,7 +28,9 @@ function Navbar() {
         <ul className='md:flex hidden space-x-4'>
           {keys.map((key) => (
             <li key={key}>
-              <Link href={`/#${key}`}>{t(key)}</Link>
+              <Link className='hover:underline' title={key} href={`/#${key}`}>
+                {t(key)}
+              </Link>
             </li>
           ))}
         </ul>

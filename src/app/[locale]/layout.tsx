@@ -21,6 +21,36 @@ const dxRigraf = localFont({
 });
 const inter = Inter({ variable: '--font-inter', subsets: ['latin'] });
 
+export const metadata = {
+  title: 'Solinn - Accueil',
+  description:
+    'Solinn est une société engagée qui conçoit des outils numériques pour les associations, départements et collectivités, afin de faciliter le suivi des personnes en situation de précarité.',
+  openGraph: {
+    title: 'Solinn - Accueil',
+    description:
+      'Solinn est une société engagée qui conçoit des outils numériques pour les associations, départements et collectivités, afin de faciliter le suivi des personnes en situation de précarité.',
+    url: 'https://solinn.fr',
+    siteName: 'Solinn',
+    images: [
+      {
+        url: 'https://solinn.fr/images/icon.png',
+        width: 1200,
+        height: 630,
+        alt: 'Solinn - Accueil'
+      }
+    ],
+    locale: 'fr_FR',
+    type: 'website'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Solinn - Accueil',
+    description:
+      'Solinn est une société engagée qui conçoit des outils numériques pour les associations, départements et collectivités, afin de faciliter le suivi des personnes en situation de précarité.',
+    images: ['https://solinn.fr/images/icon.png']
+  }
+};
+
 export default async function LocaleLayout({
   children,
   params

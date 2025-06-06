@@ -51,7 +51,7 @@ function HeroSection() {
         </BodyMD>
         <Link
           href='#solutions'
-          className='mt-6 bg-neutral-900 text-white w-fit rounded-[8px] whitespace-nowrap px-[24px] py-[12px] text-[16px] flex justify-center items-center'>
+          className='mt-6 bg-neutral-900 text-white w-fit rounded-[8px] hover:bg-cta-hover whitespace-nowrap px-[24px] py-[12px] text-[16px] flex justify-center items-center'>
           <span>Nos solutions</span>
           <FontAwesomeIcon
             icon={faArrowRight}
@@ -65,7 +65,7 @@ function HeroSection() {
           />
         </Link>
       </article>
-      <article className='w-[50%] relative lg:flex  hidden flex-col transform translate-y-[30px] translate-x-[100px]'>
+      <article className='w-[50%] relative lg:flex  hidden flex-col transform translate-y-[30px] translate-x-[50px]'>
         <Image
           src={curlyLine}
           alt='Curly Line'
@@ -74,7 +74,7 @@ function HeroSection() {
           className='absolute z-50 top-[0px] right-[200px]'
         />
         <div
-          className='h-[90vh] w-auto relative'
+          className='h-[60vh] w-auto relative'
           style={{
             maskImage: `url(/images/hero-mask.svg)`,
             maskSize: 'cover',
@@ -89,7 +89,7 @@ function HeroSection() {
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
         </div>
-        <div className='flex transform translate-y-[-60px] justify-center'>
+        <div className='flex transform translate-y-[-40px] justify-center'>
           <div className='flex-1 flex justify-center items-center'>
             <Image
               src={SunRays}
@@ -99,9 +99,9 @@ function HeroSection() {
               priority={true}
             />
           </div>
-          <div className='space-x-2 flex-1 transform translate-y-[40px] hidden md:flex'>
+          <div className='space-x-2 flex-1 transform translate-y-[60px] hidden md:flex'>
             <PointingArrow />
-            <p className='md:!w-[147px]'>
+            <p className='md:!w-[200px] whitespace-pre-wrap'>
               + de 250 000 enfants sont confiés au soin l&apos;aide sociale à
               l’enfance
             </p>

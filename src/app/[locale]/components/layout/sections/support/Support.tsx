@@ -31,8 +31,8 @@ const supportSteps = [
 ];
 export function Support() {
   return (
-    <section className='w-full h-full flex flex-col items-center justify-center bg-[#FEFDF6] p-4'>
-      <TitleH3 className='mb-3'>Un accompagnement pas à pas</TitleH3>
+    <section className='w-full h-full flex flex-col md:pt-[80px] md:pb-[80px] items-center justify-center bg-[#FEFDF6] p-4'>
+      <TitleH3 className='mb-6'>Un accompagnement pas à pas</TitleH3>
       <ul className='flex flex-col md:flex-row space-y-4'>
         {supportSteps.map((support, key) => (
           <li
@@ -43,7 +43,7 @@ export function Support() {
               height={178}
               width={249}
               alt={support.title}
-              className='w-[249px] h-[178px] object-contain rounded-lg mb-2'
+              className='w-[249px] h-[178px] object-contain rounded-lg mb-8'
             />
             <BodyMD className='font-bold text-center'>{support.title}</BodyMD>
             <BodyMD className='text-center'>{support.description}</BodyMD>

@@ -37,7 +37,7 @@ const cards = [
     items: [
       'Plus de temps pour les personnes',
       'Un espace de travail intuitif et rassurant',
-      'Une complète circulation de l’info, entre les différents intervenants'
+      'Une complète circulation de l’information, entre les différents intervenants'
     ]
   }
 ];
@@ -72,7 +72,7 @@ export function Solutions() {
             <BodyXLMD>Résultat</BodyXLMD>
             <BodyLG>
               Des outils simples, efficaces, qui fluidifient vos actions,
-              renforcent les liens,et vous libèrent du temps pour ce qui compte
+              renforcent les liens, et vous libèrent du temps pour ce qui compte
               vraiment : l’humain. Des fonctionnalités utiles, rien de superflu.
               L’essentiel, au bon endroit, au bon moment
             </BodyLG>
@@ -80,22 +80,22 @@ export function Solutions() {
               <div className='absolute right-0 top-0 flex items-center space-x-4'>
                 <PointingArrow />
                 <BodyMD className='md:w-[150px] transform translate-y-[40px]'>
-                  Recherche de disponibilité en moins de 30 secondes
+                  Simple, efficace, utile
                 </BodyMD>
               </div>
             </div>
           </div>
         </div>
       </article>
-      <article className='md:mt-16 mt-8 space-y-4 flex flex-col items-center border-b-2 md:pb-[100px] pb-[60px]'>
-        <TitleH4>Des impacts concret sur votre organisation</TitleH4>
-        <div className='grid grid-cols-1 md:grid-cols-3 justify-items-center gap-8 mt-8'>
+      <article className='md:mt-16 mt-8 space-y-4 flex flex-col items-center border-b-2 md:pb-[100px] pb-[60px] w-full'>
+        <TitleH4>Des impacts concrets sur votre organisation</TitleH4>
+        <div className='grid grid-cols-1 md:grid-cols-3 justify-items-center gap-8 mt-8 w-full'>
           {cards.map((card, index) => (
             <Card key={index} {...card} />
           ))}
         </div>
       </article>
-      <article className='space-y-4 md:pt-[100px] pt-[60px]'>
+      <article className='space-y-4 md:pt-[100px] pt-[60px] md:flex md:flex-col md:items-center'>
         <header className='flex flex-col items-center justify-center space-y-4'>
           <BodyXLMD>Nos solutions</BodyXLMD>
           <TitleH2 className='text-center'>

@@ -11,7 +11,7 @@ export function Partner({ src, partnerName }: Props) {
       height={28}
       src={src}
       alt={partnerName}
-      className='max-h-full max-w-full'
+      className='max-h-full w-[200px] max-w-full'
     />
   );
 }

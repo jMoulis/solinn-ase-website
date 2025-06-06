@@ -4,7 +4,11 @@ import { BodyMD, TitleH2, TitleH3 } from '../components/Typos/Typos';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import {
+  faInstagramSquare,
+  faLinkedin
+} from '@fortawesome/free-brands-svg-icons';
 
 export default function MentionsLegales() {
   return (
@@ -45,7 +49,39 @@ export default function MentionsLegales() {
             contact@solinn.fr
           </a>
         </BodyMD>
-        <BodyMD>Téléphone : +33 6 43 39 07 14</BodyMD>
+        <BodyMD>Téléphone : +33 4 65 84 87 39</BodyMD>
+        <BodyMD className='mt-4'>
+          💛 Directrice design et artistique: Claire Lavergne
+        </BodyMD>
+        <BodyMD>
+          Email:{' '}
+          <a
+            href='mailto:clairelavergne15@gmail.com'
+            className='text-blue-600 underline'>
+            clairelavergne15@gmail.com
+          </a>
+        </BodyMD>
+
+        <BodyMD className='space-x-3 flex items-center mt-2'>
+          <a
+            title='Site web de Claire Lavergne'
+            href='https://bento.me/claire-lavergne'
+            className='hover:text-primary'>
+            <FontAwesomeIcon icon={faGlobe} className='w-[20px]' />
+          </a>
+          <a
+            title='LinkedIn de Claire Lavergne'
+            href='https://www.linkedin.com/in/claire-lavergne-%F0%9F%8C%9E-26278542?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BDZ2g0ID9SsCIOqpiQdjqRg%3D%3De'
+            className='hover:text-blue-600'>
+            <FontAwesomeIcon icon={faLinkedin} className='w-[20px]' />
+          </a>
+          <a
+            title='Instagram de Claire Lavergne'
+            href='https://www.instagram.com/lavergne.claire/'
+            className='hover:text-pink-600'>
+            <FontAwesomeIcon icon={faInstagramSquare} className='w-[20px]' />
+          </a>
+        </BodyMD>
       </section>
 
       <section className='mb-8 m-4 md:mx-20'>

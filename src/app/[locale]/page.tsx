@@ -4,7 +4,7 @@ import { Observation } from './components/layout/sections/observation/Observatio
 import TrustedPartners from './components/layout/sections/partners/TrustedPartners';
 import { Solutions } from './components/layout/sections/solutions/Solutions';
 import { Support } from './components/layout/sections/support/Support';
-import Testimonials from './components/layout/sections/testimonials/Testimonials';
+// import Testimonials from './components/layout/sections/testimonials/Testimonials';
 import { WhoAreWe } from './components/layout/sections/whoArewe/WhoAreWe';
 
 export default function HomePage() {
@@ -16,7 +16,7 @@ export default function HomePage() {
         <Observation />
       </div>
       <Solutions />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Support />
       <WhoAreWe />
       <Faq />

@@ -6,6 +6,25 @@ import { contactSchema } from '@/lib/validation/contact';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+const checkCaptcha = async (token: string): Promise<boolean> => {
+  const response = await fetch(
+    `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error('Failed to verify reCAPTCHA');
+  }
+
+  const data = await response.json();
+  console.log('reCAPTCHA verification response:', data);
+  return data.success;
+};
 type ErrorMessage = {
   name?: string[] | undefined;
   email?: string[] | undefined;
@@ -14,7 +33,20 @@ type ErrorMessage = {
 } | null;
 type Response = { status: boolean; errors: ErrorMessage };
 
-export async function sendEmail(formData: FormData): Promise<Response> {
+export async function sendEmail(
+  formData: FormData,
+  token: string
+): Promise<Response> {
+  const isValidToken = await checkCaptcha(token);
+  console.log('reCAPTCHA token valid:', isValidToken);
+  if (!isValidToken) {
+    return {
+      status: false,
+      errors: {
+        system: ['La vérification reCAPTCHA a échoué. Veuillez réessayer.']
+      }
+    };
+  }
   const parsed = contactSchema.safeParse({
     name: formData.get('name'),
     email: formData.get('email'),

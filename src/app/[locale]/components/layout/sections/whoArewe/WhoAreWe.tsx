@@ -1,5 +1,6 @@
 import {
   BodyMD,
+  BodyXLMD,
   TitleH2,
   TitleH3
 } from '@/app/[locale]/components/Typos/Typos';
@@ -10,6 +11,7 @@ import clapHands from '@/lib/assets/images/clap-hands.png';
 import { ContactButton } from '../../../Contact/ContactButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import idCubeStamp from '@/lib/assets/images/idCubeStamp.png';
 
 export function WhoAreWe() {
   return (
@@ -17,9 +19,9 @@ export function WhoAreWe() {
       id='whoAreWe'
       className='bg-primary md:px-[80px] md:py-[60px] px-6 py-[20px]'>
       <div className='flex flex-col items-center justify-center py-10 space-y-4'>
-        <BodyMD>Qui sommes-nous ?</BodyMD>
+        <BodyXLMD>Qui sommes-nous ?</BodyXLMD>
         <TitleH2 className='text-center md:max-w-[70%]'>
-          Solinn, Une structure à impatct au service du lien humain
+          Solinn, Une structure à impact au service du lien humain
         </TitleH2>
       </div>
       <div className='flex space-x-20 items-center mb-12'>
@@ -31,14 +33,14 @@ export function WhoAreWe() {
         <div className='flex flex-col space-y-8'>
           <BodyMD>
             Solinn est le fruit d’une amitié de plus de 20 ans entre Elias,
-            responsable d’un Lieu de Vie engagé auprès des jeunes, Julien,
+            responsable d’un Lieu de Vie engagé auprès des jeunes, et Julien,
             développeur d’applications web. Portés par une même conviction —
             celle que la technologie peut servir l’humain — nous avons décidé de
             rassembler nos forces pour créer un outil à la hauteur des enjeux du
             secteur social. Ainsi est né Solinn. Une structure à impact au
-            service du lien humain Solinn conçoit des outils numériques
-            sur-mesure pour les acteurs de l’aide et du soin. Notre équipe
-            réunit des profils complémentaires : développeurs, designers,
+            service du lien humain. Solinn conçoit des outils numériques sur
+            mesure pour les acteurs de l’aide et du soin. Notre équipe réunit
+            des profils complémentaires : développeurs, designers,
             coordinateurs, spécialistes métier.
           </BodyMD>
           <BodyMD className='mb-0'>
@@ -84,6 +86,15 @@ export function WhoAreWe() {
             exploitation de vos données. Enfin, Solinn repose sur une mission
             sociale forte : aider celles et ceux qui aident.
           </BodyMD>
+          <div className='flex justify-center'>
+            <Image
+              src={idCubeStamp}
+              alt='Solinn Icon'
+              width={85}
+              height={89}
+              className='w-[100px]'
+            />
+          </div>
         </div>
 
         <div className='bg-[#FFD6F6] rounded-[50px] md:p-[40px] p-6 flex-1'>

@@ -1,25 +1,27 @@
 import { Partner } from './Airbnb';
-import airbnb from '@/lib/assets/images/airbnb.png';
-import google from '@/lib/assets/images/google.png';
-import microsoft from '@/lib/assets/images/microsoft.png';
-import hubspot from '@/lib/assets/images/hubspot.png';
+// import airbnb from '@/lib/assets/images/airbnb.png';
+// import google from '@/lib/assets/images/google.png';
+// import microsoft from '@/lib/assets/images/microsoft.png';
+// import hubspot from '@/lib/assets/images/hubspot.png';
+import idCube from '@/lib/assets/images/idCube.png';
+import noyers from '@/lib/assets/images/centreNoyers.png';
 
 const partners = [
+  // {
+  //   src: airbnb,
+  //   partnerName: 'Airbnb'
+  // },
+  // {
+  //   src: google,
+  //   partnerName: 'Google'
+  // },
   {
-    src: airbnb,
-    partnerName: 'Airbnb'
+    src: noyers,
+    partnerName: 'Centre Noyers'
   },
   {
-    src: google,
-    partnerName: 'Google'
-  },
-  {
-    src: microsoft,
-    partnerName: 'Microsoft'
-  },
-  {
-    src: hubspot,
-    partnerName: 'hubspot'
+    src: idCube,
+    partnerName: 'idCube'
   }
 ];
 const TrustedPartners = () => {

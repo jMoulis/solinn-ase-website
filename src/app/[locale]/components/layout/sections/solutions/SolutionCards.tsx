@@ -13,7 +13,7 @@ const solutionCards = [
       'Coordination fluide entre départements, établissements et partenaires',
       'Suivi des admissions et des places disponibles en temps réel',
       'Tableaux de bord partagés et actualisés',
-      'Outils collaboratif interne et sécurisé',
+      'Outils collaboratifs internes et sécurisés',
       'Gestion documentaire et notes internes',
       'Données confidentielles, hébergement en France, RGPD respecté',
       'Outil statistique complet permettant un soutien lors des prises de décisions. (ex: Elaboration du schéma social)',
@@ -52,7 +52,7 @@ const solutionCards = [
 ];
 function SolutionCards() {
   return (
-    <ul className='flex md:space-x-4 space-y-4 flex-wrap justify-center'>
+    <ul className='flex md:space-x-20 md:max-w-[80%] space-y-4 flex-wrap justify-center'>
       {solutionCards.map((card, index) => (
         <SolutionCard key={index} {...card} />
       ))}

@@ -41,7 +41,7 @@ export const TitleH3 = ({
 }) => (
   <h3
     className={twMerge(
-      'font-[dxRigraf] md:text-[40px] text-[25px]  text-center md:text-left',
+      'font-[dxRigraf] md:text-[40px] text-[25px]  text-center',
       className
     )}>
     {children}

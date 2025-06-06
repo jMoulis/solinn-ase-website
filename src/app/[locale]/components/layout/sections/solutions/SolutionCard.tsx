@@ -72,12 +72,12 @@ function SolutionCard({
             ))}
           </ul>
         </CollapsibleContent>
-        <CollapsibleTrigger className='mt-4 flex items-center'>
+        <CollapsibleTrigger className='mt-4 flex items-center hover:underline'>
           <span>En savoir</span> <Plus className='inline ml-2' size={20} />
         </CollapsibleTrigger>
       </Collapsible>
       <ContactButton
-        className='bg-black text-white'
+        className='bg-black text-white hover:bg-cta-hover'
         label={button.label}
         topic={button.topic}
         app={button.app}>
