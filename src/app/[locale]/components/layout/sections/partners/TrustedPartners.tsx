@@ -1,37 +1,33 @@
-import { Partner } from './Airbnb';
-// import airbnb from '@/lib/assets/images/airbnb.png';
-// import google from '@/lib/assets/images/google.png';
-// import microsoft from '@/lib/assets/images/microsoft.png';
-// import hubspot from '@/lib/assets/images/hubspot.png';
+import { Partner } from './Partner';
 import idCube from '@/lib/assets/images/idCube.png';
 import noyers from '@/lib/assets/images/centreNoyers.png';
+import mut from '@/lib/assets/images/mut.png';
 
 const partners = [
-  // {
-  //   src: airbnb,
-  //   partnerName: 'Airbnb'
-  // },
-  // {
-  //   src: google,
-  //   partnerName: 'Google'
-  // },
+  {
+    src: mut,
+    partnerName: 'Mut',
+    href: 'https://agence-mut.fr/'
+  },
   {
     src: noyers,
-    partnerName: 'Centre Noyers'
+    partnerName: 'Centre Noyers',
+    href: 'https://centredesnoyers.org/'
   },
   {
     src: idCube,
-    partnerName: 'idCube'
+    partnerName: 'idCube',
+    href: 'https://www.innovales.fr/metiers/id-cube/'
   }
 ];
 const TrustedPartners = () => {
   return (
-    <section className='bg-primary flex justify-center text-red items-center text-2xl md:py-[60px] md:pb-[100px] md:px-[80px] px-6 py-[60px]'>
+    <section className='bg-primary flex justify-center text-red items-center text-2xl md:py-[60px] md:pb-[80px] md:px-[80px] px-6 py-[60px]'>
       <ul className='flex max-w-[100vw] overflow-x-auto items-center'>
         {partners.map((partner) => (
           <li
             key={partner.partnerName}
-            className='min-h-[50pw] min-w-[90px] ml-8 '>
+            className='min-h-[50pw] min-w-[90px] ml-8 transform grayscale-100'>
             <Partner {...partner} />
           </li>
         ))}

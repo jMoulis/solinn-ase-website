@@ -13,6 +13,8 @@ import { useTranslations } from 'next-intl';
 import ContactForm from './Contact';
 import { cn } from '@/lib/utils';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 type Props = {
   label: string;
@@ -46,9 +48,19 @@ export function ContactButton({
       <DialogContent className='md:max-w-[90vw] md:w-[40vw] bg-custom-white'>
         <DialogHeader>
           <DialogTitle>Contactez-nous</DialogTitle>
-          <DialogDescription hidden>
-            Prenez contact avec notre équipe pour discuter de vos besoins, poser
-            vos questions ou planifier une démonstration de nos solutions.
+          <DialogDescription>
+            <p>
+              Remplisser le formulaire ou contactez-nous par téléphone et ou
+              email
+            </p>
+            <a href='tel:+33465848739' className='underline mt-2 block'>
+              <FontAwesomeIcon icon={faPhone} className='mr-2' />
+              04 65 84 87 39
+            </a>
+            <a href='mailto:contact@solinn.fr' className='underline block mt-2'>
+              <FontAwesomeIcon icon={faEnvelope} className='mr-2' />
+              contact@solinn.fr
+            </a>
           </DialogDescription>
           <GoogleReCaptchaProvider
             reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}>

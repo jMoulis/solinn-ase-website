@@ -36,7 +36,7 @@ type Props = {
 export default function ContactForm({ topic, app }: Props) {
   const [success, setSuccess] = useState(false);
   const [errors, setErrors] = useState<Record<string, string[]>>({});
-  const { executeRecaptcha, container } = useGoogleReCaptcha();
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const form = useForm<ContactFormInput>({
     resolver: zodResolver(contactSchema),
@@ -48,8 +48,6 @@ export default function ContactForm({ topic, app }: Props) {
       app: app || ''
     }
   });
-
-  console.log(container);
 
   const onSubmit = async (data: ContactFormInput) => {
     const formData = new FormData();
@@ -87,7 +85,7 @@ export default function ContactForm({ topic, app }: Props) {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className='space-y-4 my-8 w-full max-h-[80vh] bg-custom-white p-4 rounded-md overflow-y-auto'>
+        className='space-y-4 w-full max-h-[80vh] bg-custom-white pt-4 rounded-md overflow-y-auto'>
         <FormField
           control={form.control}
           name='name'

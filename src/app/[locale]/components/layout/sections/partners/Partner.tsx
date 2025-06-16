@@ -7,11 +7,11 @@ type Props = {
 export function Partner({ src, partnerName }: Props) {
   return (
     <Image
-      width={90}
-      height={28}
+      width={150}
+      height={150}
       src={src}
       alt={partnerName}
-      className='max-h-full w-[200px] max-w-full'
+      // className='max-h-full w-[150px] max-w-full'
     />
   );
 }

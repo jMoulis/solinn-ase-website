@@ -6,7 +6,7 @@ import { ContactButton } from '../Contact/ContactButton';
 
 function Navbar() {
   const t = useTranslations('HomePage.navbar');
-  const keys = ['solutions', 'testimonials', 'whoAreWe', 'faq'];
+  const keys = ['solutions', 'whoAreWe', 'faq'];
   return (
     <header className='flex fixed right-0 left-0 items-center z-50 justify-between md:px-20 px-6 py-8 bg-primary'>
       <div className='hidden md:block'>

@@ -6,7 +6,7 @@ import Footer from './components/layout/Footer';
 import Main from './components/layout/Main/Main';
 import localFont from 'next/font/local';
 import { Inter } from 'next/font/google';
-import './globals.css';
+import '../globals.css';
 import { Analytics } from '@vercel/analytics/next';
 
 const dxRigraf = localFont({
