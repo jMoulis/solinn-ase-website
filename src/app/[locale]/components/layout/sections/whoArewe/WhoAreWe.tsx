@@ -2,61 +2,60 @@ import {
   BodyMD,
   BodyXLMD,
   TitleH2,
-  TitleH3
-} from '@/app/[locale]/components/Typos/Typos';
-import Image from 'next/image';
-import whoAreWe from '@/lib/assets/images/whoAreWe.png';
-import { CurlyLineBlack } from '@/app/[locale]/components/shared/CurlyLineBlack';
-import clapHands from '@/lib/assets/images/clap-hands.png';
-import { ContactButton } from '../../../Contact/ContactButton';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import idCubeStamp from '@/lib/assets/images/idCubeStamp.png';
+  TitleH3,
+} from "@/app/[locale]/components/Typos/Typos";
+import Image from "next/image";
+import whoAreWe from "@/lib/assets/images/team.webp";
+import { CurlyLineBlack } from "@/app/[locale]/components/shared/CurlyLineBlack";
+import clapHands from "@/lib/assets/images/clap-hands.png";
+import { ContactButton } from "../../../Contact/ContactButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import idCubeStamp from "@/lib/assets/images/idCubeStamp.png";
+import PointingArrow from "../hero/PointingArrow";
 
 export function WhoAreWe() {
   return (
     <section
-      id='whoAreWe'
-      className='bg-primary md:px-[80px] md:py-[60px] px-6 py-[20px]'>
-      <div className='flex flex-col items-center justify-center py-10 space-y-4'>
+      id="whoAreWe"
+      className="bg-primary md:px-[80px] md:py-[60px] px-6 py-[20px]"
+    >
+      <div className="flex flex-col items-center justify-center py-10 space-y-4 md:max-w-6xl m-auto">
         <BodyXLMD>Qui sommes-nous ?</BodyXLMD>
-        <TitleH2 className='text-center md:max-w-[70%]'>
+        <TitleH2 className="text-center md:max-w-[70%]">
           Solinn, Une structure à impact au service du lien humain
         </TitleH2>
       </div>
-      <div className='flex space-x-20 items-center mb-12'>
+      <div className="flex space-x-20 items-center mb-12 md:max-w-6xl m-auto">
         <Image
           src={whoAreWe}
           alt="Image de l'équipe Solinn"
-          className='w-[420px] h-[500px] hidden md:block'
+          className="h-[500px] hidden md:block"
         />
-        <div className='flex flex-col space-y-8'>
+        <div className="flex flex-col space-y-8">
           <BodyMD>
-            Solinn est le fruit d’une amitié de plus de 20 ans entre Elias,
-            responsable d’un Lieu de Vie engagé auprès des jeunes, et Julien,
-            développeur d’applications web. Portés par une même conviction —
-            celle que la technologie peut servir l’humain — nous avons décidé de
-            rassembler nos forces pour créer un outil à la hauteur des enjeux du
-            secteur social. Ainsi est né Solinn. Une structure à impact au
-            service du lien humain. Solinn conçoit des outils numériques sur
-            mesure pour les acteurs de l’aide et du soin. Notre équipe réunit
-            des profils complémentaires : développeurs, designers,
-            coordinateurs, spécialistes métier.
+            Portés par une même conviction — celle que la technologie peut
+            servir l’humain — nous avons décidé de rassembler nos forces pour
+            créer un outil à la hauteur des enjeux du secteur social. Ainsi est
+            né Solinn. Une structure à impact au service du lien humain. Solinn
+            conçoit des outils numériques sur mesure pour les acteurs de l’aide
+            et du soin. Notre équipe réunit des profils complémentaires :
+            développeurs, designers, coordinateurs, spécialistes métier.
           </BodyMD>
-          <BodyMD className='mb-0'>
+          <BodyMD className="mb-0">
             <strong>Notre mission</strong> est de mettre la technologie au
             service du lien, en soutenant celles et ceux qui soutiennent les
             autres. Solinn, c’est aussi une manière d’agir à notre place, pour
             vous aider à tenir la vôtre.
           </BodyMD>
-          <BodyMD className='mb-0'>Deux plateformes dédiées</BodyMD>
-          <ul className='mb-0'>
-            <li className='list-disc ml-6'>
+          <BodyMD className="mb-0">Deux plateformes dédiées</BodyMD>
+          <ul className="mb-0">
+            <li className="list-disc ml-6">
               <BodyMD>
                 Solinn ASE : pour les services de l’Aide Sociale à l’Enfance
               </BodyMD>
             </li>
-            <li className='list-disc ml-6'>
+            <li className="list-disc ml-6">
               <BodyMD>
                 Solinn ASSO : pour les associations sociales, éducatives et
                 solidaires
@@ -70,12 +69,12 @@ export function WhoAreWe() {
           </BodyMD>
         </div>
       </div>
-      <div className='flex flex-col md:flex-row'>
-        <div className='bg-white rounded-[50px] md:p-[40px] p-6 md:mr-8 flex-2 relative mb-8 md:mb-0'>
-          <div className='absolute top-[-30px] right-0 hidden md:block'>
+      <div className="flex flex-col md:flex-row md:max-w-6xl m-auto">
+        <div className="bg-white rounded-[50px] md:p-[40px] p-6 md:mr-8 flex-2 relative mb-8 md:mb-0">
+          <div className="absolute top-[-30px] right-0 hidden md:block">
             <CurlyLineBlack />
           </div>
-          <TitleH3 className='md:mb-8 mb-4 text-left'>Pourquoi nous ?</TitleH3>
+          <TitleH3 className="md:mb-8 mb-4 text-left">Pourquoi nous ?</TitleH3>
           <BodyMD>
             Chez Solinn, nous privilégions une écoute active plutôt qu’un modèle
             imposé : nous vous aidons à structurer le vôtre. Notre technologie
@@ -86,19 +85,28 @@ export function WhoAreWe() {
             exploitation de vos données. Enfin, Solinn repose sur une mission
             sociale forte : aider celles et ceux qui aident.
           </BodyMD>
-          <div className='flex justify-center'>
+          <div className="flex relative w-fit items-end">
             <Image
               src={idCubeStamp}
-              alt='Solinn Icon'
+              alt="Solinn Icon"
               width={85}
               height={89}
-              className='w-[100px]'
+              className="w-[100px]"
             />
+            <div className="bottom-0 right-[-100px] hidden md:flex space-x-5 ml-5">
+              <div className="flex items-end space-x-4">
+                <PointingArrow />
+              </div>
+              <BodyMD className="md:w-[250px]">
+                Notre impact sociale est reconnu par des acteurs majeurs du
+                secteur, comme idCube.
+              </BodyMD>
+            </div>
           </div>
         </div>
 
-        <div className='bg-[#FFD6F6] rounded-[50px] md:p-[40px] p-6 flex-1'>
-          <TitleH3 className='md:mb-8 mb-4  text-left'>
+        <div className="bg-[#FFD6F6] rounded-[50px] md:p-[40px] p-6 flex-1">
+          <TitleH3 className="md:mb-8 mb-4  text-left">
             Notre conviction
           </TitleH3>
           <BodyMD>
@@ -109,9 +117,9 @@ export function WhoAreWe() {
           </BodyMD>
         </div>
       </div>
-      <div className='bg-secondary rounded-[50px] md:p-[40px] p-6 flex items-center justify-between mt-8'>
+      <div className="bg-secondary rounded-[50px] md:p-[40px] p-6 flex items-center justify-between mt-8 md:max-w-6xl m-auto">
         <div>
-          <TitleH3 className=' text-left'>
+          <TitleH3 className=" text-left">
             Libérez du temps pour ce qui compte vraiment: l&apos;humain.
           </TitleH3>
           <BodyMD>
@@ -123,16 +131,17 @@ export function WhoAreWe() {
           </BodyMD>
           <BodyMD>Et tout commence par une conversation.</BodyMD>
           <ContactButton
-            className='bg-black text-white mt-4'
-            label='Demandez une démo'
-            topic='demo'>
+            className="bg-black text-white mt-4"
+            label="Demandez une démo"
+            topic="demo"
+          >
             <FontAwesomeIcon icon={faArrowRight} />
           </ContactButton>
         </div>
         <Image
-          alt='Des mains qui se clap'
+          alt="Des mains qui se clap"
           src={clapHands}
-          className='hidden md:block'
+          className="hidden md:block"
           width={358}
           height={327}
         />

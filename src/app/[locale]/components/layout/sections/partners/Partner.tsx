@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image';
+import Image, { StaticImageData } from "next/image";
 
 type Props = {
   src: StaticImageData;
@@ -7,8 +7,8 @@ type Props = {
 export function Partner({ src, partnerName }: Props) {
   return (
     <Image
-      width={150}
-      height={150}
+      width={250}
+      height={250}
       src={src}
       alt={partnerName}
       // className='max-h-full w-[150px] max-w-full'
