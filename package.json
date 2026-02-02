@@ -27,7 +27,7 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.511.0",
     "motion": "^12.12.2",
-    "next": "15.3.0",
+    "next": "^16.1.6",
     "next-intl": "^4.1.0",
     "next-recaptcha-v3": "^1.5.2",
     "postcss": "^8.5.3",
