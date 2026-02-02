@@ -1,40 +1,41 @@
 // app/mentions-legales/page.tsx
-import React from 'react';
-import { BodyMD, TitleH2, TitleH3 } from '../components/Typos/Typos';
-import Image from 'next/image';
-import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import React from "react";
+import { BodyMD, TitleH2, TitleH3 } from "../components/Typos/Typos";
+import Image from "next/image";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import {
   faInstagramSquare,
-  faLinkedin
-} from '@fortawesome/free-brands-svg-icons';
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function MentionsLegales() {
   return (
-    <main className='relative text-neutral-800 bg-[#FEFDF6]'>
+    <main className="relative text-neutral-800 bg-[#FEFDF6]">
       <Link
-        href='/'
-        className='m-4 flex items-center text-neutral-600 hover:text-neutral-800 transition-colors'>
-        <FontAwesomeIcon icon={faArrowLeft} className='mr-2 h-5' />
+        href="/"
+        className="m-4 flex items-center text-neutral-600 hover:text-neutral-800 transition-colors"
+      >
+        <FontAwesomeIcon icon={faArrowLeft} className="mr-2 h-5" />
         <BodyMD>Retour à l&apos;accueil</BodyMD>
       </Link>
-      <div className='relative flex flex-col items-center'>
-        <TitleH2 className='text-3xl font-bold mb-8 text-center z-20'>
+      <div className="relative flex flex-col items-center">
+        <TitleH2 className="text-3xl font-bold mb-8 text-center z-20">
           Mentions légales
         </TitleH2>
         <Image
-          src='/images/techno-underline.png'
-          alt='underline'
+          src="/images/techno-underline.png"
+          alt="underline"
           width={200}
           height={20}
           priority
-          className='inline-block absolute md:w-[480px] w-[240px] z-10 md:top-[30px] top-[15px]'
+          className="inline-block absolute md:w-[480px] w-[240px] z-10 md:top-[30px] top-[15px]"
         />
       </div>
-      <section className='mb-8 m-4 md:mx-20'>
-        <TitleH3 className='text-start'>1. Éditeur du site</TitleH3>
-        <BodyMD className='mb-1 font-medium'>SOLINN</BodyMD>
+      <section className="mb-8 m-4 md:mx-20">
+        <TitleH3 className="text-start">1. Éditeur du site</TitleH3>
+        <BodyMD className="mb-1 font-medium">SOLINN</BodyMD>
         <BodyMD>SARL au capital de 5 000 €</BodyMD>
         <BodyMD>
           Siège social : 2521 route de bonneville, 74800 Arenthon, France
@@ -42,68 +43,73 @@ export default function MentionsLegales() {
         <BodyMD>SIRET : 941 601 221 00018</BodyMD>
         <BodyMD>Directeur de la publication : Julien Moulis</BodyMD>
         <BodyMD>
-          Email :{' '}
+          Email :{" "}
           <a
-            href='mailto:contact@solinn.fr'
-            className='text-blue-600 underline'>
+            href="mailto:contact@solinn.fr"
+            className="text-blue-600 underline"
+          >
             contact@solinn.fr
           </a>
         </BodyMD>
-        <BodyMD>Téléphone : +33 4 65 84 87 39</BodyMD>
-        <BodyMD className='mt-4'>
+        <BodyMD className="mt-4">
           💛 Directrice design et artistique: Claire Lavergne
         </BodyMD>
         <BodyMD>
-          Email:{' '}
+          Email:{" "}
           <a
-            href='mailto:clairelavergne15@gmail.com'
-            className='text-blue-600 underline'>
+            href="mailto:clairelavergne15@gmail.com"
+            className="text-blue-600 underline"
+          >
             clairelavergne15@gmail.com
           </a>
         </BodyMD>
 
-        <BodyMD className='space-x-3 flex items-center mt-2'>
+        <BodyMD className="space-x-3 flex items-center mt-2">
           <a
-            title='Site web de Claire Lavergne'
-            href='https://bento.me/claire-lavergne'
-            className='hover:text-primary'>
-            <FontAwesomeIcon icon={faGlobe} className='w-[20px]' />
+            title="Site web de Claire Lavergne"
+            href="https://bento.me/claire-lavergne"
+            className="hover:text-primary"
+          >
+            <FontAwesomeIcon icon={faGlobe} className="w-[20px]" />
           </a>
           <a
-            title='LinkedIn de Claire Lavergne'
-            href='https://www.linkedin.com/in/claire-lavergne-%F0%9F%8C%9E-26278542?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BDZ2g0ID9SsCIOqpiQdjqRg%3D%3De'
-            className='hover:text-blue-600'>
-            <FontAwesomeIcon icon={faLinkedin} className='w-[20px]' />
+            title="LinkedIn de Claire Lavergne"
+            href="https://www.linkedin.com/in/claire-lavergne-%F0%9F%8C%9E-26278542?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BDZ2g0ID9SsCIOqpiQdjqRg%3D%3De"
+            className="hover:text-blue-600"
+          >
+            <FontAwesomeIcon icon={faLinkedin} className="w-[20px]" />
           </a>
           <a
-            title='Instagram de Claire Lavergne'
-            href='https://www.instagram.com/lavergne.claire/'
-            className='hover:text-pink-600'>
-            <FontAwesomeIcon icon={faInstagramSquare} className='w-[20px]' />
+            title="Instagram de Claire Lavergne"
+            href="https://www.instagram.com/lavergne.claire/"
+            className="hover:text-pink-600"
+          >
+            <FontAwesomeIcon icon={faInstagramSquare} className="w-[20px]" />
           </a>
         </BodyMD>
       </section>
 
-      <section className='mb-8 m-4 md:mx-20'>
-        <TitleH3 className='text-start'>2. Hébergeur du site</TitleH3>
-        <BodyMD className='mb-1 font-medium'>Vercel Inc.</BodyMD>
+      <section className="mb-8 m-4 md:mx-20">
+        <TitleH3 className="text-start">2. Hébergeur du site</TitleH3>
+        <BodyMD className="mb-1 font-medium">Vercel Inc.</BodyMD>
         <BodyMD>440 N Barranca Ave #4133</BodyMD>
         <BodyMD>Covina, CA 91723</BodyMD>
         <BodyMD>États-Unis</BodyMD>
         <BodyMD>
-          Site web :{' '}
+          Site web :{" "}
           <a
-            href='https://vercel.com'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='text-blue-600 underline'>
+            href="https://vercel.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 underline"
+          >
             https://vercel.com
           </a>
         </BodyMD>
       </section>
 
-      <section className='mb-8 m-4 md:mx-20'>
-        <TitleH3 className='text-start'>3. Propriété intellectuelle</TitleH3>
+      <section className="mb-8 m-4 md:mx-20">
+        <TitleH3 className="text-start">3. Propriété intellectuelle</TitleH3>
         <BodyMD>
           L’ensemble du contenu du site (textes, images, graphismes, logo,
           icônes, etc.) est la propriété exclusive de Solinn, sauf mention
@@ -113,8 +119,8 @@ export default function MentionsLegales() {
         </BodyMD>
       </section>
 
-      <section className='mb-8 m-4 md:mx-20'>
-        <TitleH3 className='text-start'>4. Données personnelles</TitleH3>
+      <section className="mb-8 m-4 md:mx-20">
+        <TitleH3 className="text-start">4. Données personnelles</TitleH3>
         <BodyMD>
           Aucune donnée personnelle n’est collectée sans votre consentement. Le
           site Solinn ne collecte des informations personnelles relatives à
@@ -122,26 +128,27 @@ export default function MentionsLegales() {
           (formulaire de contact, newsletter). Conformément à la loi «
           Informatique et Libertés » et au RGPD, vous disposez d’un droit
           d’accès, de rectification et d’opposition aux données personnelles
-          vous concernant. Pour exercer ce droit, contactez-nous à l’adresse :{' '}
+          vous concernant. Pour exercer ce droit, contactez-nous à l’adresse :{" "}
           <a
-            href='mailto:contact@solinn.fr'
-            className='text-blue-600 underline'>
+            href="mailto:contact@solinn.fr"
+            className="text-blue-600 underline"
+          >
             contact@solinn.fr
           </a>
           .
         </BodyMD>
       </section>
 
-      <section className='mb-8 m-4 md:mx-20'>
-        <TitleH3 className='text-start'>5. Cookies</TitleH3>
+      <section className="mb-8 m-4 md:mx-20">
+        <TitleH3 className="text-start">5. Cookies</TitleH3>
         <BodyMD>
           Le site Solinn n&apos;utilise pas de cookies pour collecter des
           données personnelles.
         </BodyMD>
       </section>
 
-      <section className='mb-8 m-4 md:mx-20'>
-        <TitleH3 className='text-start'>6. Responsabilité</TitleH3>
+      <section className="mb-8 m-4 md:mx-20">
+        <TitleH3 className="text-start">6. Responsabilité</TitleH3>
         <BodyMD>
           Solinn s’efforce d’assurer au mieux de ses possibilités, l’exactitude
           et la mise à jour des informations diffusées sur le site. Toutefois,
@@ -150,8 +157,8 @@ export default function MentionsLegales() {
         </BodyMD>
       </section>
 
-      <section className='mb-8 m-4 md:mx-20'>
-        <TitleH3 className='text-start'>7. Liens externes</TitleH3>
+      <section className="mb-8 m-4 md:mx-20">
+        <TitleH3 className="text-start">7. Liens externes</TitleH3>
         <BodyMD>
           Le site Solinn peut contenir des liens vers d’autres sites. Solinn ne
           peut être tenu responsable du contenu et de la politique de
@@ -159,7 +166,7 @@ export default function MentionsLegales() {
         </BodyMD>
       </section>
 
-      <div className='text-sm text-neutral-500 mt-12 text-right'>
+      <div className="text-sm text-neutral-500 mt-12 text-right">
         Dernière mise à jour : 28 mai 2025
       </div>
     </main>

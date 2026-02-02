@@ -11,14 +11,8 @@ import Image from "next/image";
 
 const faqs = [
   {
-    title: "A qui s'address Solinn",
-    content:
-      "Solinn s’adresse aux associations, aux départements, et plus largement à toutes les structures engagées dans l’aide, le soin ou l’accompagnement des personnes en situation de vulnérabilité.",
-  },
-  {
-    title: "Quelle est la différence entre Solinn ASE et Solinn ASSO ?",
-    content:
-      "Solinn ASE est dédié aux services de l’Aide Sociale à l’Enfance : suivi des jeunes, coordination entre établissements et départements, tableaux de bord, etc. Solinn ASSO est conçu pour les associations : gestion des bénéficiaires, projets, équipes, dons et valorisation des actions.",
+    title: "A qui s'adresse Solinn ?",
+    content: "Solinn s’adresse aux services de l'aide sociale à l'enfance.",
   },
   {
     title: "Est-ce que Solinn s'adapte à notre façon de travailler ?",
@@ -29,11 +23,6 @@ const faqs = [
     title: "Faut-il être à l'aise avec le numérique pour utiliser Solinn ?",
     content:
       "Non. Les interfaces sont pensées pour être simples, accessibles à tous les profils, et rassurantes pour les équipes de terrain comme pour la direction.",
-  },
-  {
-    title: "Est-ce que Solinn convient aux petites structures ?",
-    content:
-      "Absolument. Nos solutions sont pensées pour être utiles, sobres et efficaces, quelle que soit la taille de votre structure. Pas de superflu, juste l’essentiel.",
   },
   {
     title: "Comment démarrer avec Solinn ?",
