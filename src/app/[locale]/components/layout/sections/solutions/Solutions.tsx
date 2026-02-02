@@ -64,11 +64,10 @@ export function Solutions() {
           />
           <div className="space-y-6 relative">
             <BodyLG>
-              Chez Solinn, nous accompagnons les associations, départements et
-              structures d’aide en concevant des solutions numériques
-              sur-mesure, ancrées dans vos réalités de terrain. Pas de modèle
-              figé. Nous partons de vos besoins, de vos pratiques, de votre
-              façon de travailler.
+              Chez Solinn, nous accompagnons départements et structures d’aide
+              en concevant des solutions numériques sur-mesure, ancrées dans vos
+              réalités de terrain. Pas de modèle figé. Nous partons de vos
+              besoins, de vos pratiques, de votre façon de travailler.
             </BodyLG>
             <BodyXLMD className="mb-2">Résultat</BodyXLMD>
             <BodyLG>
@@ -100,12 +99,12 @@ export function Solutions() {
         <header className="flex flex-col items-center justify-center space-y-4">
           <BodyXLMD>Nos solutions</BodyXLMD>
           <TitleH2 className="text-center">
-            Deux plateformes, une même intention
+            Une plateforme, une même intention
           </TitleH2>
           <div>
             <BodyLG className="md:w-[800px] text-center">
-              Solinn s’adresse à celles et ceux qui accompagnent des personnes
-              en situation de vulnérabilité.
+              Solinn s’adresse à les services de l’aide sociale à l’enfance. en
+              situation de vulnérabilité.
             </BodyLG>
             <BodyLG className="md:w-[800px] text-center">
               Nous avons conçu deux espaces complémentaires, portés par une même

@@ -48,22 +48,17 @@ export function WhoAreWe() {
             autres. Solinn, c’est aussi une manière d’agir à notre place, pour
             vous aider à tenir la vôtre.
           </BodyMD>
-          <BodyMD className="mb-0">Deux plateformes dédiées</BodyMD>
+          <BodyMD className="mb-0">Une plateforme dédiée</BodyMD>
           <ul className="mb-0">
             <li className="list-disc ml-6">
               <BodyMD>
-                Solinn ASE : pour les services de l’Aide Sociale à l’Enfance
-              </BodyMD>
-            </li>
-            <li className="list-disc ml-6">
-              <BodyMD>
-                Solinn ASSO : pour les associations sociales, éducatives et
-                solidaires
+                Solinn ASE : pour les services de l&apos;aide sociale à
+                l&apos;enfance
               </BodyMD>
             </li>
           </ul>
           <BodyMD>
-            Ces plateformes ont été conçues main dans la main avec les
+            Cette plateforme a été conçue main dans la main avec les
             professionnels de terrain, pour respecter vos usages, alléger votre
             quotidien et renforcer la continuité de vos actions.
           </BodyMD>

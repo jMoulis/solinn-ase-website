@@ -1,6 +1,5 @@
 import {
   BodyLG,
-  BodyMD,
   DisplayXSBold,
   TitleH2,
 } from "@/app/[locale]/components/Typos/Typos";
@@ -65,8 +64,8 @@ export function Observation() {
             {[
               "❌ Des outils dispersés ou mal adaptés à vos réalités",
               "❌ Des informations qui se perdent entre les mains et les services",
-              "❌ Une charge mentale constante, tout repose sur les personnes",
-              "❌ Une difficulté à valoriser vos actions, par manque de temps ou de données",
+              "❌ Une charge mentale constante, une perte de repères",
+              "❌ Une difficulté à suivre les parcours des jeunes",
             ].map((item, index) => (
               <li key={index}>
                 <BodyLG className="mt-2">{item}</BodyLG>
@@ -85,8 +84,8 @@ export function Observation() {
               {[
                 "✅ Moins de charge mentale, plus de sérénité au quotidien",
                 "✅ Une équipe pleinement connectée, avec des repères partagés",
-                "✅ Du temps retrouvé pour accompagner, pas pour chercher",
-                "✅ Des actions visibles et valorisées, sans effort supplémentaire",
+                "✅ Du temps retrouvé pour accompagner",
+                "✅ Des actions visibles et valorisées",
               ].map((item, index) => (
                 <li key={index}>
                   <BodyLG className="mt-2">{item}</BodyLG>
@@ -97,9 +96,6 @@ export function Observation() {
         </div>
         <div className="flex">
           <div className="flex-col hidden md:flex items-center transform md:translate-x-[40px]">
-            <BodyMD className="md:w-[131px]">
-              + de 150 000 associations engagées
-            </BodyMD>
             <PointingArrowUp />
           </div>
           <Image
